@@ -1,4 +1,4 @@
-# Stimulsoft Sashboards.JS + React
+# React samples for Stimulsoft Dashboards.JS
 
 This simple demo illustrates integration of Stimulsoft Dashboards.JS into an React project.
 
