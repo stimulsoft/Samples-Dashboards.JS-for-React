@@ -1,5 +1,6 @@
 import React from 'react';
-import { Stimulsoft } from "stimulsoft-dashboards-js-react";
+import { Stimulsoft } from 'stimulsoft-dashboards-js-react';
+import '../styles.css';
 
 var report: Stimulsoft.Report.StiReport;
 
@@ -13,12 +14,19 @@ function printHtml_Click() {
 
 function App() {
     report = new Stimulsoft.Report.StiReport();
-    report.loadFile("Dashboards/Dashboard.mrt");
+    report.loadFile('Dashboards/Dashboard.mrt');
 
     return (
-        <div>
-            <button onClick={printPdf_Click}>Print Dashboard as PDF</button>
-            <button onClick={printHtml_Click}>Print Dashboard as HTML</button>
+        <div className='container'>
+            <h4>This sample demonstrates how to print a dashboard:</h4>
+            <div className='container-button'>
+                <button onClick={printPdf_Click} className='button' title='Print Dashboard as PDF File'>
+                    Print PDF
+                </button>
+                <button onClick={printHtml_Click} className='button' title='Print Dashboard as HTML File'>
+                    Print HTML
+                </button>
+            </div>
         </div>
     );
 }
