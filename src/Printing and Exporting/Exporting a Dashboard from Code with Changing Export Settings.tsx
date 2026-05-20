@@ -10,7 +10,7 @@ async function saveDashboardPdf() {
     settings.orientation = Stimulsoft.Report.Components.StiPageOrientation.Portrait;
     settings.paperSize = Stimulsoft.System.Drawing.Printing.PaperKind.A3;
 
-    var pdfData = await report.exportDocumentAsync2(Stimulsoft.Report.StiExportFormat.Pdf, null, settings);
+    var pdfData = await report.exportDocumentAsync2(Stimulsoft.Report.StiExportFormat.Pdf, undefined, settings);
     Stimulsoft.System.StiObject.saveAs(pdfData, report.reportAlias + '.pdf', 'application/pdf');
 }
 
